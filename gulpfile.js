@@ -11,23 +11,23 @@ gulp.task('sass', function () {
 });
 
 gulp.task('panini', function () {
-    gulp.src('pages/**/*.html')
+    gulp.src('./src/pages/**/*.html')
         .pipe(panini({
-            root: 'pages/',
-            layouts: 'layouts/',
-            partials: 'partials/',
-            helpers: 'helpers/',
-            data: 'data/'
+            root: './src/pages/',
+            layouts: './src/layouts/',
+            partials: './src/partials/',
+            helpers: './src/helpers/',
+            data: './src/data/'
         }))
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('panini:watch', function() {
-    gulp.watch(['./src/{layouts,partials,helpers,data}/**/*'], [panini.refresh]);
+    gulp.watch(['./src/{pages,layouts,partials,helpers,data}/**/*'], [panini.refresh]);
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('./public/sass/**/*.scss', ['sass']);
+    gulp.watch('./sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['panini:watch', 'sass:watch']);
+gulp.task('default', ['panini', 'panini:watch', 'sass', 'sass:watch']);
