@@ -18,6 +18,7 @@
   "homepage": "https://github.com/camstu555/gritfitnessfestival.com#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "node-sass": "^4.10.0",
     "panini": "^1.6.3"
   }
 }
