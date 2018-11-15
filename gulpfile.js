@@ -30,4 +30,4 @@ gulp.task('sass:watch', function () {
     gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['panini', 'panini:watch', 'sass', 'sass:watch']);
+gulp.task('default', ['panini:watch', 'sass:watch', 'panini', 'sass']);
