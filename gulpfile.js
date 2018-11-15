@@ -5,7 +5,7 @@ var sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
 gulp.task('sass', function () {
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src('./scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 });
@@ -27,7 +27,7 @@ gulp.task('panini:watch', function() {
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
+    gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
 gulp.task('default', ['panini', 'panini:watch', 'sass', 'sass:watch']);
