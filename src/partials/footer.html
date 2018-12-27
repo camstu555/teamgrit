@@ -70,3 +70,11 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (function(w) {
+    if (w.location.href.includes("http:")) {
+      w.location.href = w.location.href.replace("http:", "https:");
+    }
+  })(window);
+</script>

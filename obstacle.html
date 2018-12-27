@@ -267,6 +267,14 @@
         </div>
       </div>
     </footer>
+    
+    <script>
+      (function(w) {
+        if (w.location.href.includes("http:")) {
+          w.location.href = w.location.href.replace("http:", "https:");
+        }
+      })(window);
+    </script>
     <script src="js/core/jquery.min.js" type="text/javascript"></script>
     <script src="js/core/popper.min.js" type="text/javascript"></script>
     <script src="js/core/bootstrap.min.js" type="text/javascript"></script>
